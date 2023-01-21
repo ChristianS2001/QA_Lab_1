@@ -2,8 +2,6 @@
 #the information from the user and this information then gets placed into a .txt file named "students.txt", to use this 
 #program simply run it with the correct python requirements installed and enter on the commandline what it prompts you to enter.
 
-#first attempt at the lab.
-
 def create_student_profile():
     # Prompt user for student information
     full_name = input("Enter the student's full name (first and last): ")
