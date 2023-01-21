@@ -1,6 +1,8 @@
 #Christian Smith, 1/21/2023, TUID: 915789291, This program is for lab1 and is creating a student profile by requesting
-#the information from the user and this information then gets placed into a .txt file named "students.txt", to use this 
+#the information from the user and this information then gets placed into a .csv file named "students.csv", to use this 
 #program simply run it with the correct python requirements installed and enter on the commandline what it prompts you to enter.
+
+import csv #this is so we can write to a csv file.
 
 def create_student_profile():
     # Prompt user for student information
@@ -20,7 +22,7 @@ def create_student_profile():
     undergraduate = input("Is the student an undergraduate (yes/no): ")
 
     # Write student information to a text file and organize it properly
-    with open("students.txt", "a") as file:
+    with open("students.csv", "a") as file:
         file.write("Name: " + full_name + "\n")
         file.write("TUID: " + tuid + "\n")
         file.write("Email: " + email + "\n")
@@ -28,6 +30,7 @@ def create_student_profile():
         file.write("Major: " + major + "\n")
         file.write("Graduation: " + graduation + "\n")
         file.write("Undergraduate: " + undergraduate + "\n")
+        file.write("\n") #to make a line between all entries
 
 # Loop to allow for multiple students
 while True:
